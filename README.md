@@ -7,7 +7,7 @@ The code is divided into three main steps:
 2. Load CSV Data and Perform Data Wrangling
 3. Create Model
 
-1. Extract Data from the Web and Save into a CSV File
+# 1. Extract Data from the Web and Save into a CSV File
 - This step involves web scraping of the Divar.ir website to extract real estate data.
 
 **Required Libraries and Tools**
@@ -25,7 +25,7 @@ The code is divided into three main steps:
 - Storing each real estate data in a list.
 - Saving the list of lists into a `DataFrame` object using the `pandas` library.
 
-2. Load CSV Data and Perform Data Wrangling
+# 2. Load CSV Data and Perform Data Wrangling
 - In this step, the data saved in the CSV file from the previous step is loaded and pre-processed.
 
 **Required Libraries and Tools**
@@ -39,7 +39,7 @@ The code is divided into three main steps:
 - Cleaning the data in the `DataFrame` by removing the missing or duplicate values, and converting the data into the correct data types.
 -Plotting a scatter matrix of the data to visualize the relationships between different variables.
 
-3. Create Model
+# 3. Create Model
 - In this step, the cleaned and pre-processed data from the previous step is used to create a model.
 
 **Required Libraries and Tools**
