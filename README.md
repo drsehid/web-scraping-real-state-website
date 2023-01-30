@@ -14,6 +14,7 @@ The code is divided into three main steps:
 - Selenium: A tool to automate the browser actions required to scrape the website.
 - BeautifulSoup: A Python library to parse HTML and XML pages.
 - webdriver_manager: A library that helps to manage the downloading and installation of the web drivers required by Selenium.
+- re: A library used for pattern matching.
 
 **Functionalities**
 - Installing the appropriate version of ChromeDriver by using the ChromeDriverManager class from the `webdriver_manager` package.
@@ -21,28 +22,28 @@ The code is divided into three main steps:
 - Finding all the links in a page using the `BeautifulSoup.findAll()` method, filtered by a specific class.
 - Opening each link using the `requests` library, parsing the page content and creating a `BeautifulSoup` object for each page.
 - Finding all the HTML tags that have relevant data for our purpose, using the `BeautifulSoup.findAll()` method, filtered by specific class names.
-- Storing each real estate data in a list, as a tuple.
-- Saving the list of tuples into a `DataFrame` object using the `pandas` library.
+- Storing each real estate data in a list.
+- Saving the list of lists into a `DataFrame` object using the `pandas` library.
 
 2. Load CSV Data and Perform Data Wrangling
 - In this step, the data saved in the CSV file from the previous step is loaded and pre-processed.
 
 **Required Libraries and Tools**
 - pandas: A library used to load the CSV data and perform data wrangling.
+- numpy: A library used for numerical computations and data manipulation.
+- matplotlib: A library used for data visualization.
+- seaborn: A library used for creating visualizations for statistical models.
 
 **Functionalities**
 - Loading the data saved in the CSV file into a `DataFrame` object using the `pandas.read_csv()` method.
 - Cleaning the data in the `DataFrame` by removing the missing or duplicate values, and converting the data into the correct data types.
+-Plotting a scatter matrix of the data to visualize the relationships between different variables.
 
 3. Create Model
 - In this step, the cleaned and pre-processed data from the previous step is used to create a model.
 
 **Required Libraries and Tools**
-- numpy: A library used for numerical computations and data manipulation.
-- matplotlib: A library used for data visualization.
-- re: A library used for pattern matching.
-- seaborn: A library used for creating visualizations for statistical models.
+- scikit-learn: A library for machine learning that provides simple and efficient tools for data analysis and mining.
 
 **Functionalities**
-- Plotting a scatter matrix of the data to visualize the relationships between different variables.
 - Creating a model to predict the price of a house, using the cleaned and pre-processed data.
